@@ -1,0 +1,26 @@
+query PipeLineQuery($fullPath: ID!, $after: String) {
+    project(fullPath: $fullPath) {
+        name
+        id
+        jobsEnabled
+        mergeRequests(state: opened, sort: CREATED_DESC, after: $after) {
+            edges {
+                node {
+                    iid
+                    sourceBranch
+                    webUrl
+                    title
+                    headPipeline {
+                        ref
+                        updatedAt
+                        status
+                    }
+                }
+            }
+            pageInfo {
+                endCursor
+                hasNextPage
+            }
+        }
+    }
+}
