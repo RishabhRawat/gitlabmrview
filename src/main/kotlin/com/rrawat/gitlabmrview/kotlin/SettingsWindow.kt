@@ -15,7 +15,7 @@ import javax.swing.event.ListSelectionListener
 
 
 @Suppress("UnstableApiUsage")
-class SettingsWindow : BoundConfigurable("Smart Gitlab Plugin", "Configuration for Smart Gitlab Plugin") {
+class SettingsWindow : BoundConfigurable("Gitlab MR View", "Configuration for Gitlab MR View Plugin") {
     var currentProject = SettingsService.instance.projectSettings.getOrNull(0)
 
     class MyCellRenderer<T> : ColoredListCellRenderer<T>() {
@@ -49,8 +49,7 @@ class SettingsWindow : BoundConfigurable("Smart Gitlab Plugin", "Configuration f
                         projectList.addListSelectionListener(object : ListSelectionListener {
                             override fun valueChanged(e: ListSelectionEvent?) {
                                 if (e == null || e.valueIsAdjusting) return
-                                currentProject =
-                                    SettingsService.instance.projectSettings[projectList.selectedIndex]
+                                currentProject = SettingsService.instance.projectSettings[projectList.selectedIndex]
                                 projectPanel?.component = createProjectPanel(currentProject!!)
                             }
 

@@ -25,7 +25,7 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="Smart Gitlab Pipeline" secondary="true" icon="AllIcons.General.Modified" anchor="bottom"
+        <toolWindow id="Gitlab MR View" secondary="true" icon="AllIcons.General.Modified" anchor="bottom"
                     factoryClass="com.rrawat.gitlabmrview.kotlin.MainWindowFactory"/>
         <projectConfigurable instance="com.rrawat.gitlabmrview.kotlin.SettingsWindow"/>
     </extensions>

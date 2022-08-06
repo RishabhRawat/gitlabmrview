@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.rrawat"
-version = "1.0-SNAPSHOT"
+version = "0.0.1-alpha"
 
 repositories {
     mavenCentral()
@@ -39,7 +39,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("220")
-        untilBuild.set("223.*")
+        untilBuild.set("233.*")
     }
 
     test {

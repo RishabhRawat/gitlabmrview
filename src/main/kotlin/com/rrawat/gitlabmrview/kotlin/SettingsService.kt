@@ -4,7 +4,7 @@ import com.intellij.openapi.components.*
 
 @Service
 @State(
-    name = "SmartGitlabPipelines", storages = [Storage("smartgitlabpipelines.xml", roamingType = RoamingType.DISABLED)]
+    name = "GitlabMRView", storages = [Storage("gitlabmrview.xml", roamingType = RoamingType.DISABLED)]
 )
 class SettingsService : PersistentStateComponent<SettingsService.SettingsState> {
     data class SettingsState(var projectSettings: MutableList<ProjectSettings> = mutableListOf())
