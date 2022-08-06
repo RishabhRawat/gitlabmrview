@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.rrawat"
-version = "0.0.1-alpha"
+version = "0.0.2-alpha"
 
 repositories {
     mavenCentral()
